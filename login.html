@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body{
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           background-color: #f4f4f4;
+ }
+
+       
+a{
+text-decoration: none;
+}        
+.container{
+            margin-top: 10px;
+            padding: 20px;
+            margin-left:auto;
+            margin-right: auto;
+            width: 80%;
+            max-width: 500px;
+            min-height:100vh;
+            box-shadow: 2px 2px 19px 1px rgba(0, 0, 0, 0.389);
+            display: flex ;
+            justify-content: center;
+        }
+        .container1{
+            /* display: block; */
+            width: 400px;
+            height: 500px;
+            margin-top: 10px;
+            /* display: inline-flexbox; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .log{
+          margin-top: 20px;
+            font-size: 17px;
+            width: 160px;
+            font-size: xx-large;
+        }
+
+        .wb{
+            font-size: large;
+            margin-top: 20px;
+
+        }
+        .login{
+           
+           margin-top: 20px;
+           height: 40px;
+            color: white;
+            background-color: rgb(0, 106, 255);
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-size: 22px;
+        }
+        .or{
+            margin-top: 20px;
+        }
+        .password-container {
+            position: relative;
+        }
+
+        #password {
+            width: 350px;
+            height: 40px;
+            margin-left: 10px;
+            padding-left: 10px;
+            font-size: larger;
+        }
+
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    #user{
+        width: 350px;
+        height: 40px;
+        margin-left: 10px;
+        padding-left: 10px;
+        font-size: larger;
+    
+    }
+    .rem{
+        margin-left: -90px;
+        margin-top: -19px;
+    }
+    #chk{
+        margin-left: -205px;
+        margin-top: 14px;
+        width: 29px;
+    }
+    .fp{
+        margin-top: -20px;
+        margin-left: 250px;
+
+    }
+    #ntn{
+        width: 370px;
+        height: 50px;
+        font-size: larger;
+        text-align: center;
+        background-color: rgb(0, 123, 255);
+        color: white;
+        border: none;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    #ntn:active{
+        background-color: rgb(4, 65, 131);
+        
+    }
+
+    .dha{
+        margin-left: 80px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <div class="log"> <img src="freelancer logo1.png" alt=""></div>
+            <div class="wb">Welcome Back</div>
+            <div class="login"> Log in with Facebook</div><br>
+            <div class="or">OR</div><br>
+            <div class="txt">
+             <input type="email" placeholder="Email or Username" id="user" maxlength="30" required></div><br>
+             <div class="password-container">
+                <input type="password" placeholder="Password" id="password" maxlength="30" required>
+                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+            </div><br><br>
+            <input type="checkbox" id="chk">
+            <div class="rem">Remember me</div>
+            <div class="fp"><a href="#" >Forgot Password</a></div><br>
+            <div><a href="#"><input type="button" width="200" id="ntn" value="Log In"></a></div><br><br>
+            <div class="dha">Dont have an account?<a href="#">&nbsp;Sign up</a></div>
+            <div></div>
+            <div></div>
+        </div>
+      
+    </div>
+  
+</body>
+</html>
+<script>
+    function togglePassword() {
+        const passwordInput = document.getElementById('password');
+        const toggleIcon = document.querySelector('.toggle-password');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.textContent = '👁️';
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.textContent = '👁️';
+        }
+    }
+</script>
